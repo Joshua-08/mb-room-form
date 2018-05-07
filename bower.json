@@ -1,0 +1,26 @@
+{
+  "name": "gthotel-html",
+  "description": "HTML version of GT Hotel",
+  "main": "index.js",
+  "authors": [
+    "Pixelhub"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.7.0",
+    "PACE": "pace#^1.0.2",
+    "popper.js": "^1.12.9",
+    "jquery": "^3.2.1",
+    "matchHeight": "matchheight#^0.7.2",
+    "vue": "^2.5.16",
+    "vue-resource": "^1.5.0"
+  }
+}

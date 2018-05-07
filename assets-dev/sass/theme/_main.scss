@@ -1,0 +1,29 @@
+#room-form-widget
+{
+    font-family: Cabin;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #fff;
+    background-color: #01295a;
+}
+
+.rooms img 
+{
+    width: 100px;
+    height: 100px;
+}
+
+.rooms td
+{
+    vertical-align: middle;
+}
+
+.nav-link
+{
+    color:#01295a;
+}
+
+.clickable {
+	cursor: pointer;
+}

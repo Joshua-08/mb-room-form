@@ -1,0 +1,94 @@
+[
+    {
+        "id": "room_1",
+        "label": "Room 1",
+        "dates": [
+            {
+                "id": "mon-30-04-18",
+                "date": "2018-04-30",
+                "options": [
+                    {
+                        "id": 1,
+                        "title": "Deluxe Quad",
+                        "capacity": 4,
+                        "price": "3350",
+                        "description": "Lorem ipsum dolor sit amet."
+                    },
+                    {
+                        "id": 2,
+                        "title": "Deluxe Double",
+                        "capacity": 2,
+                        "price": "2350",
+                        "description": "Lorem ipsum dolor sit amet."
+                    }
+                ]
+            },
+            {
+                "id": "tue-01-05-18",
+                "date": "2018-05-01",
+                "options": [
+                    {
+                        "id": 1,
+                        "title": "Deluxe Quad",
+                        "capacity": 4,
+                        "price": "3350",
+                        "description": "Lorem ipsum dolor sit amet."
+                    },
+                    {
+                        "id": 2,
+                        "title": "Deluxe Double",
+                        "capacity": 2,
+                        "price": "2350",
+                        "description": "Lorem ipsum dolor sit amet."
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "room_2",
+        "label": "Room 2",
+        "dates": [
+            {
+                "id": "mon-30-04-18",
+                "date": "2018-04-30",
+                "options": [
+                    {
+                        "id": 1,
+                        "title": "Deluxe Quad",
+                        "capacity": 4,
+                        "price": "3350",
+                        "description": "Lorem ipsum dolor sit amet."
+                    },
+                    {
+                        "id": 2,
+                        "title": "Deluxe Double",
+                        "capacity": 2,
+                        "price": "2350",
+                        "description": "Lorem ipsum dolor sit amet."
+                    }
+                ]
+            },
+            {
+                "id": "tue-01-05-18",
+                "date": "2018-05-01",
+                "options": [
+                    {
+                        "id": 1,
+                        "title": "Deluxe Quad",
+                        "capacity": 4,
+                        "price": "3350",
+                        "description": "Lorem ipsum dolor sit amet."
+                    },
+                    {
+                        "id": 2,
+                        "title": "Deluxe Double",
+                        "capacity": 2,
+                        "price": "2350",
+                        "description": "Lorem ipsum dolor sit amet."
+                    }
+                ]
+            }
+        ]
+    }
+]

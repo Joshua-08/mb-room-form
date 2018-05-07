@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Milree Booking</title>
+    <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+	<div id="room-form-widget" class="container col-sm-5 mt-5">
+        <!-- Room Tabs -->
+        <ul class="nav nav-tabs">
+            <li class="nav-item" v-for="(roomData, index) in roomsData">
+                <a class="nav-link"
+                    href
+                    v-bind:class="{'active': activeTab === index}"
+                    v-on:click.prevent="activeTab = index">
+                    {{roomData.label}}
+                </a>
+            </li>
+        </ul>
+        <!-- Tab Content -->
+        <div class="tab-content mt-4">
+
+            <h6>Select Room Type Per Day</h6>
+
+            <div class="tab-pane" 
+                v-for="(roomData, index) in roomsData" 
+                v-bind:class="{'active': activeTab === index}">
+
+                <ul class="nav nav-pills mb-4">
+                    <li class="nav-item" v-for="date in roomData.dates">
+                        <a class="nav-link" 
+                        href 
+                        v-bind:class="{'active': activePills[index] === date.id}" 
+                        v-on:click.prevent="activatePill(index, date.id)"
+                        >{{date.id}}</a>
+                    </li>
+                </ul>
+        <!-- Rooms -->
+                <div class="tab-content">
+                    <div class="tab-pane"
+                        v-for="(date,pillindex) in roomData.dates"
+                        v-bind:class="{'active': activePills[index] === date.id}">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr class="no-hover">
+                                    <th>Room Type</th>
+                                    <th></th>
+                                    <th>Price</th>
+                                    <th>Rooms</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr
+                                    v-for="(rooms,roomindex) in date.options"
+                                    v-bind:class="isRoomActive(index, date.id, rooms.id)"
+                                    v-on:click="activateRoom(index, date.id, rooms.id)"
+                                    class="rooms clickable">
+                                
+                                    <td v-if="roomindex === 0">
+                                        <img src="images/room1.jpg" alt="room1">
+                                    </td>
+                                    <td v-else-if="roomindex === 1">
+                                        <img src="images/room2.jpg" alt="room2">
+                                    </td>
+                                    <td>
+                                        <strong>{{rooms.title}}</strong>
+                                    </td>
+                                    <td>PHP {{rooms.price}}</td>
+                                    <td>{{rooms.capacity}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+        <!-- Children -->
+                <div class="room-guest-form">
+                    <h6 class="border-top pt-2 border-bottom pb-2">Select Age of Children</h6>
+                    <form>
+                        <div class="row">
+                            <div class="col-sm-6 form-group" 
+                                v-for="(children,childrenindex) in [1,2]">
+                                <label>Child {{children}}</label>
+                                <select
+                                    class="form-control clickable" 
+                                    v-model="childGuest[index][childrenindex]">
+                                    <option value="2_below">2 Years Old Below</option>
+                                    <option value="3_above">3 Years Old Above</option>
+                                </select>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+	<script type="text/javascript" src="assets/js/theme.js"></script>
+</body>
